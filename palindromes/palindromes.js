@@ -8,11 +8,11 @@ const palindromes = function(string) {
 
     let regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
 
-    var cleanString = lowercaseString.replace(regex, "")
+    let cleanString = lowercaseString.replace(regex, "")
 
     // Remove white space
 
-    var stringToReverse = cleanString.split(" ").join("");
+    let stringToReverse = cleanString.split(" ").join("");
 
     // Create a variable with the reversed string
 
