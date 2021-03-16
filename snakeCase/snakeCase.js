@@ -1,9 +1,23 @@
 const snakeCase = function(string) {
 
-    cleanString = string.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-    console.log(cleanString)
+    let regex = /[!"#$%&'()*+,./:;<=>?@[\]^_`{|}~]/g;
+    
+    let cleanString = string.replace(regex, "");
 
-    return cleanString;
+    let snakeString = ""
+
+    for(char of cleanString){
+        if(char === " " || char === "-"){
+            char = "_";
+        }
+
+        snakeString += char
+
+    }
+
+    //.split(" ").join("_")
+
+    return snakeString;
 }
 
 module.exports = snakeCase
