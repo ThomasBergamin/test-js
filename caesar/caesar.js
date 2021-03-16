@@ -58,7 +58,7 @@ const caesar = function(string, shift) {
             // Add encoded character to the final string
             encodedString += encodedChar;
         }else{
-            // Just append char 
+            // Just append char if it's not a letter
             encodedString += char;
         }
 
