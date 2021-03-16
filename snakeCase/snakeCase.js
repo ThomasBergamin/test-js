@@ -4,14 +4,14 @@ const snakeCase = function(string) {
     
     let cleanString = string.replace(regex, "");
 
-    let snakeString = ""
+    let snakeString = "";
 
     for(char of cleanString){
         if(char === " " || char === "-"){
             char = "_";
         }
 
-        snakeString += char
+        snakeString += char;
 
     }
 
