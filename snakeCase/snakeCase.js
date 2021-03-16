@@ -1,10 +1,14 @@
 const snakeCase = function(string) {
 
     let regex = /[!"#$%&'()*+,./:;<=>?@[\]^_`{|}~]/g;
+
+    // Clean punctuation
     
     let cleanString = string.replace(regex, "");
 
     let snakeString = "";
+
+    // Replace spaces and dashes with underscore
 
     for(char of cleanString){
         if(char === " " || char === "-"){
@@ -15,9 +19,9 @@ const snakeCase = function(string) {
 
     }
 
-    //.split(" ").join("_")
+    // Lower all cases and return string
 
-    return snakeString;
+    return snakeString.toLowerCase();
 }
 
 module.exports = snakeCase
